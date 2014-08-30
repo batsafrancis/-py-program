@@ -1,23 +1,24 @@
 __author__ = 'francis'
-__author__ = 'francis'
 from numbers import Number
-from numpy import *
+from numpy import*
+import math
 
-def  triangular_area (height : Number ,length : Number)->Number:
+
+def triangular_area(height: Number, length: Number)->Number:
     """
 calculate the area of a triangle
-    @param heigth:The heigth of triangle
+    @param height:The height of triangle
     @param length:the length of the triangle
-    @return:
+    @return:Area
     >>> triangular_area(3,4)
     23
     """
     return 0.5*height*length
 
-print(triangular_area(3,4))
+print(triangular_area(3, 4))
 
 
-def rectangle_perimeter (length:Number ,width:Number)->Number:
+def rectangle_perimeter(length: Number, width: Number)->Number:
     """
 calculates the perimeter of a rectangle with
 
@@ -28,41 +29,37 @@ calculates the perimeter of a rectangle with
     56
     """
     return 2*length + 2*width
-print(rectangle_perimeter(3,4))
+
+print(rectangle_perimeter(3, 4))
 
 
-
-def cylinder_volume(radius : Number  ,height : Number)->Number:
+def cylinder_volume(radius: Number, height: Number)->Number:
     """
 calculates the volume of the cylinder with
 
- >>> cylinder_volume(radius,height)
+ >>> cylinder_volume(3, 4)
     @param radius:The radius of the cylinder
     @param height: The height of the cylinder
-    @return:  Volume of cylinder (cudic units)
+    @return:  Volume of cylinder (cubic units)
     """
-    return pi*radius**2* height
-print(cylinder_volume(3,4))
+    return pi*radius**2*height
+print(cylinder_volume(3, 4))
 
 
-
-def cylinder_surface_area(radius : Number ,height: Number)-> Number:
-     """
+def cylinder_surface_area(radius: Number, height: Number)-> Number:
+    """
  calculates the surface area of a cylinder
 
 >>> cylinder_surface_area(3,4)
      @param radius: The radius of the cylinder
      @param height: The height of the cylinder
-     @return: surface area of a cylinder
- 12
+     @return: surface area of a cylinder(square unit)
      """
-     return 2*pi*radius*height + 2*pi*radius**2
-print( cylinder_surface_area(3,4))
+    return 2*pi*radius*height + 2*pi*radius**2
+print(cylinder_surface_area(3, 4))
 
 
-
-
-def cone_volume(radius,height):
+def cone_volume(radius, height):
     """
  Calculates the volume of a cone with
 
@@ -72,11 +69,10 @@ def cone_volume(radius,height):
     @return: Volume of cone
     """
     return 1/3*pi*radius**height
-print(cone_volume(3,4))
+print(cone_volume(3, 4))
 
 
-
-def sphere_volume(radius : Number) -> Number:
+def sphere_volume(radius: Number) -> Number:
     """
 Calculates the volume of a cone
 
@@ -88,25 +84,21 @@ Calculates the volume of a cone
 print(sphere_volume(3))
 
 
-
-
-def frustum_cone_volume(top_radius:  Number    ,base_radius : Number  ,height : Number) ->Number:
+def frustum_cone_volume(top_radius, base_radius, height) ->Number:
     """
 Calculates the volume of frustum cone with
 
 >>> frustum_cone_volume(2,3,4)
     @param top_radius: The radius of the top or the cut
     @param base_radius: The base radius
-    @param heigth:The height of of the frustum cone
-    @return:
+    @param height:The height of of the frustum cone
+    @return: Volume of the frustum of a cone(cubic unit)
     """
     return 1/3*pi*height*(top_radius**2 + top_radius*base_radius + base_radius**2)
-print(frustum_cone_volume(2,3,4))
+print(frustum_cone_volume(2, 3, 4))
 
 
-
-
-def parallelogram_area(base: Number,height: Number) -> Number:
+def parallelogram_area(base, height):
     """
     calculate parallelogram area
 
@@ -115,28 +107,24 @@ def parallelogram_area(base: Number,height: Number) -> Number:
     @param height:The height of the parallelogram
     @return: Area of th of the parallelogram
     """
-    return base*height
-print(parallelogram_area(3,4))
+    return base * height
+print(parallelogram_area(3, 4))
 
 
-
-
-def parallelogram_area(base,height):
+def parallelogram_perimeter(base: Number, width: Number)->Number:
     """
    calculates the Area of parallelogram with
 
->>> parallelogram_area(3,4)
-    @param base:        The base length
-    @param height: The height of the parallelogram
-    :return:Area parallelogram (unit square)
+>>> parallelogram_perimeter(3,4)
+    @param base:   The base length
+    @param width: The height of the parallelogram
+    @return:Perimeter parallelogram (unit )
     """
-    return base*height
-print(parallelogram_area(3,5))
+    return 2*base+2*width
+print(parallelogram_area(3, 5))
 
 
-
-
-def rhombus_area(long_diagonal,short_diagonal):
+def rhombus_area(long_diagonal, short_diagonal):
     """
  calculate the Area of a rhombus with
 
@@ -147,13 +135,10 @@ def rhombus_area(long_diagonal,short_diagonal):
     2
     """
     return 0.5*long_diagonal*short_diagonal
-print(rectangle_perimeter(1,1))
+print(rectangle_perimeter(1, 1))
 
 
-
-
-
-def tetrahedron_volume(base: Number)-> Number:
+def tetrahedron_volume(base)-> Number:
     """
     calculate tetrahedron volume.
 
@@ -164,14 +149,12 @@ def tetrahedron_volume(base: Number)-> Number:
 
     10
     """
-    return (base**2)/6*sqrt(2)
+    return (base**2)/6*math.sqrt(2)
 
 print(tetrahedron_volume(2))
 
 
-
-
-def regular_pyramid_volume(base: Number , height:Number) -> Number:
+def regular_pyramid_volume(base: Number, height: Number) -> Number:
     """
     calculate the volume of a regular pyramid.
     >>>  regular_pyramid_volume(3,4)
@@ -179,7 +162,7 @@ def regular_pyramid_volume(base: Number , height:Number) -> Number:
     @param height: Height of the pyramid
     :return:volume of regular pyramid(cube unit)
     """
-    return  1/3*base*height
-print(regular_pyramid_volume(3,4))
+    return 1/3*base*height
+print(regular_pyramid_volume(3, 4))
 
 
