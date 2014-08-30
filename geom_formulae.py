@@ -11,7 +11,7 @@ calculate the area of a triangle
     @param length:the length of the triangle
     @return:Area
     >>> triangular_area(3,4)
-    23
+    6
     """
     return 0.5*height*length
 
@@ -149,7 +149,7 @@ def tetrahedron_volume(base)-> Number:
 
     10
     """
-    return (base**2)/6*math.sqrt(2)
+    return (base**2)/12*math.sqrt(2)
 
 print(tetrahedron_volume(2))
 
@@ -160,9 +160,15 @@ def regular_pyramid_volume(base: Number, height: Number) -> Number:
     >>>  regular_pyramid_volume(3,4)
     @param base: Base length of the pyramid
     @param height: Height of the pyramid
-    :return:volume of regular pyramid(cube unit)
+    @return:volume of regular pyramid(cube unit)
     """
     return 1/3*base*height
 print(regular_pyramid_volume(3, 4))
 
 
+if __name__ == "__main__":
+    sampleSide = 4
+    print("area:",
+          square_area(sampleSide),
+          "perimeter:",
+          square_perimeter(sampleSide))
