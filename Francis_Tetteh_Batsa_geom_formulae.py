@@ -11,14 +11,14 @@ def triangle_area(side_a=None, side_b=None, side_c=None, height=None, angle_alph
     calculates the area of a triangle with al sides given, two sides and an angle (alpha) and in the
     case of base and height.
 
->>> triangle_area(3,4)
+>>> triangle_area(side_a=5,height=8)
     @param height:The height of triangle
     @param side_a:the length of the triangle
     @param side_b: The side b of the triangle
     @param side_c: The side c of the triangle
     @param angle_alpha: The the angle between the sides of the triangle
     @return: Area of a triangle (square units)
-    6
+    20
     """
     if (side_a is not None) & (height is not None):
         area = side_a * height / 2    # side_a is the base in this case
@@ -187,7 +187,6 @@ def regular_pyramid_volume(base: Number, height: Number) -> Number:
     5
     """
     return 1/3*base*height
-print("regular pyramid", regular_pyramid_volume(3, 5))
 
 
 ############ TRIANGULAR PRISM  ##############################################
@@ -208,7 +207,7 @@ def triangular_prim_volume(base, length, height):
 
 if __name__ == "__main__":
 
-    print("Area of triangle ", triangle_area(side_a=5, angle_alpha=7))
+    print("Area of triangle ", triangle_area(side_a=5, height=8))
     print("perimeter of rectangle", rectangle_perimeter(1, 4))
     print("Volume_of_cylinder ", cylinder_volume(2, 4))
     print("surface area of a cylinder ", cylinder_surface_area(3, 4))
