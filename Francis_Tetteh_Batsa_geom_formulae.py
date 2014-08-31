@@ -32,8 +32,8 @@ def triangle_area(side_a=None, side_b=None, side_c=None, height=None, angle_alph
         if (side_a is not None) & (side_b is not None) & (side_c is not None):
             if ((side_a + side_b) > side_c) & ((side_a + side_c) > side_b) & ((side_b + side_c) > side_a):  # CONDITION
                 s = (side_a + side_b + side_c) / 2  # s is the perimeter of the triangle
-            area = math.sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))    # area of the triangle
-            return area
+                area = math.sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))    # area of the triangle
+                return area
         else:
             return "The sum of any two sides of the triangle must be greater that the third side"
 
