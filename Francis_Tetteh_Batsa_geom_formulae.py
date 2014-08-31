@@ -50,7 +50,7 @@ calculates the perimeter of a rectangle with
     return 2*length + 2*width
 
 
-#  VOLUME AND SURFACE AREA OF A CYLINDER #
+#  VOLUME AND SURFACE AREA OF A CYLINDER
 def cylinder_volume(radius: Number, height: Number)->Number:
     """
 calculates the volume of the cylinder with
@@ -104,7 +104,7 @@ Calculates the volume of a cone
     return 4*(pi/3*radius)
 
 
-#  VOLUME OF A FRUSTUM CONE #
+#  VOLUME OF A FRUSTUM CONE
 def frustum_cone_volume(top_radius, base_radius, height):
     """
    Calculates the volume of frustum cone the arguments
@@ -119,7 +119,7 @@ def frustum_cone_volume(top_radius, base_radius, height):
     return 1/3*pi*height*(top_radius**2 + top_radius*base_radius + base_radius**2)
 
 
-# AREA AND PERIMETER OF PARALLELOGRAM  #
+# AREA AND PERIMETER OF PARALLELOGRAM
 def parallelogram_area(base, height):
     """
     calculate parallelogram area
