@@ -35,7 +35,7 @@ def triangle_area(side_a=None, side_b=None, side_c=None, height=None, angle_alph
             return area
         else:
             return "The sum of any two sides of the triangle must be greater that the third side"
-print("Area of triangle ", triangle_area(1, 5,5,7))
+print("Area of triangle ", triangle_area(1, 5, 5, 7))
 
 
 def rectangle_perimeter(length: Number, width: Number)->Number:
