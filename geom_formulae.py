@@ -4,6 +4,7 @@ from numpy import*
 import math
 
 
+#################  AREA  AND PERIMETER OF A TRIANGLE  ##################
 def triangular_area(height: Number, length: Number)->Number:
     """
 calculate the area of a triangle
@@ -33,6 +34,7 @@ calculates the perimeter of a rectangle with
 print(rectangle_perimeter(3, 4))
 
 
+##################  VOLUME AND SURFACE AREA OF A CYLINDER #############################
 def cylinder_volume(radius: Number, height: Number)->Number:
     """
 calculates the volume of the cylinder with
@@ -59,6 +61,7 @@ def cylinder_surface_area(radius: Number, height: Number)-> Number:
 print(cylinder_surface_area(3, 4))
 
 
+################  VOLUME OF A CONE  ################################################
 def cone_volume(radius, height):
     """
  Calculates the volume of a cone with
@@ -72,6 +75,7 @@ def cone_volume(radius, height):
 print(cone_volume(3, 4))
 
 
+##############  VOLUME OF A SPHERE #################################################
 def sphere_volume(radius: Number) -> Number:
     """
 Calculates the volume of a cone
@@ -84,13 +88,14 @@ Calculates the volume of a cone
 print(sphere_volume(3))
 
 
+#############  VOLUME OF A FRUSTUM CONE ###########################################
 def frustum_cone_volume(top_radius, base_radius, height) ->Number:
     """
-Calculates the volume of frustum cone with
+Calculates the volume of frustum cone the arguments
 
 >>> frustum_cone_volume(2,3,4)
-    @param top_radius: The radius of the top or the cut
-    @param base_radius: The base radius
+    @param top_radius: The radius of the top or the cut of the cone
+    @param base_radius: The base radius of the cone
     @param height:The height of of the frustum cone
     @return: Volume of the frustum of a cone(cubic unit)
     """
@@ -98,6 +103,7 @@ Calculates the volume of frustum cone with
 print(frustum_cone_volume(2, 3, 4))
 
 
+############  AREA AND PERIMETER OF PARALLELOGRAM  ################################
 def parallelogram_area(base, height):
     """
     calculate parallelogram area
@@ -124,6 +130,7 @@ def parallelogram_perimeter(base: Number, width: Number)->Number:
 print(parallelogram_area(3, 5))
 
 
+###########  AREA OF A RHOMBUS  #################################################
 def rhombus_area(long_diagonal, short_diagonal):
     """
  calculate the Area of a rhombus with
@@ -138,6 +145,7 @@ def rhombus_area(long_diagonal, short_diagonal):
 print(rectangle_perimeter(1, 1))
 
 
+######### VOLUME OF TETRAHEDRON  ##############################################
 def tetrahedron_volume(base)-> Number:
     """
     calculate tetrahedron volume.
@@ -154,6 +162,7 @@ def tetrahedron_volume(base)-> Number:
 print(tetrahedron_volume(2))
 
 
+################ VOLUME OF A REGULAR PYRAMID  #################################
 def regular_pyramid_volume(base: Number, height: Number) -> Number:
     """
     calculate the volume of a regular pyramid.
@@ -166,9 +175,18 @@ def regular_pyramid_volume(base: Number, height: Number) -> Number:
 print(regular_pyramid_volume(3, 4))
 
 
-if __name__ == "__main__":
-    sampleSide = 4
-    print("area:",
-          square_area(sampleSide),
-          "perimeter:",
-          square_perimeter(sampleSide))
+############ TRIANGULAR PRISM  ##############################################
+def triangular_prim_volume(base, length, height):
+    """
+Calculates the volume of the triangular prism given :
+
+>>> triangular_prim_volume(2,3,4 )
+    @param base: The base of the triangular prism
+    @param length: The length of the triangular prism
+    @param height: The height of th triangular prism
+    @return: Volume of a triangular prism (cubic unit)
+    12
+    """
+    area = 1/2*(base*length*height)
+    return area
+print(triangular_prim_volume(2, 3, 4))
