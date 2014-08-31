@@ -2,9 +2,8 @@ __author__ = 'francis'
 from numbers import Number
 from numpy import*
 import math
+#  AREA  AND PERIMETER OF A TRIANGLE
 
-
-#################  AREA  AND PERIMETER OF A TRIANGLE  ##################
 
 def triangle_area(side_a=None, side_b=None, side_c=None, height=None, angle_alpha=None) -> Number:
     """
@@ -51,7 +50,7 @@ calculates the perimeter of a rectangle with
     return 2*length + 2*width
 
 
-##################  VOLUME AND SURFACE AREA OF A CYLINDER #############################
+#  VOLUME AND SURFACE AREA OF A CYLINDER #
 def cylinder_volume(radius: Number, height: Number)->Number:
     """
 calculates the volume of the cylinder with
@@ -78,7 +77,7 @@ def cylinder_surface_area(radius: Number, height: Number)-> Number:
     return 2*pi*radius*height + 2*pi*radius**2
 
 
-################  VOLUME OF A CONE  ################################################
+# VOLUME OF A CONE
 def cone_volume(radius, height):
     """
  Calculates the volume of a cone with
@@ -92,7 +91,7 @@ def cone_volume(radius, height):
     return 1/3*pi*radius**height
 
 
-##############  VOLUME OF A SPHERE #################################################
+#  VOLUME OF A SPHERE
 def sphere_volume(radius: Number) -> Number:
     """
 Calculates the volume of a cone
@@ -105,7 +104,7 @@ Calculates the volume of a cone
     return 4*(pi/3*radius)
 
 
-#############  VOLUME OF A FRUSTUM CONE ###########################################
+#  VOLUME OF A FRUSTUM CONE #
 def frustum_cone_volume(top_radius, base_radius, height):
     """
    Calculates the volume of frustum cone the arguments
@@ -120,7 +119,7 @@ def frustum_cone_volume(top_radius, base_radius, height):
     return 1/3*pi*height*(top_radius**2 + top_radius*base_radius + base_radius**2)
 
 
-############  AREA AND PERIMETER OF PARALLELOGRAM  ################################
+# AREA AND PERIMETER OF PARALLELOGRAM  #
 def parallelogram_area(base, height):
     """
     calculate parallelogram area
@@ -147,7 +146,7 @@ def parallelogram_perimeter(base: Number, width: Number)->Number:
     return 2*base+2*width
 
 
-###########  AREA OF A RHOMBUS  #################################################
+#  AREA OF A RHOMBUS
 def rhombus_area(long_diagonal, short_diagonal):
     """
  calculate the Area of a rhombus with
@@ -161,7 +160,7 @@ def rhombus_area(long_diagonal, short_diagonal):
     return 0.5*long_diagonal*short_diagonal
 
 
-######### VOLUME OF TETRAHEDRON  ##############################################
+# VOLUME OF TETRAHEDRON
 def tetrahedron_volume(base: Number)-> Number:
     """
     calculate tetrahedron volume.
@@ -175,7 +174,7 @@ def tetrahedron_volume(base: Number)-> Number:
     return (base**2)/12*math.sqrt(2)
 
 
-################ VOLUME OF A REGULAR PYRAMID  #################################
+# VOLUME OF A REGULAR PYRAMID
 def regular_pyramid_volume(base: Number, height: Number) -> Number:
     """
     calculates the volume of a regular pyramid.
@@ -189,7 +188,7 @@ def regular_pyramid_volume(base: Number, height: Number) -> Number:
     return 1/3*base*height
 
 
-############ TRIANGULAR PRISM  ##############################################
+# TRIANGULAR PRISM
 def triangular_prim_volume(base, length, height):
     """
     Calculates the volume of the triangular prism given :
