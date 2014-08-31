@@ -7,8 +7,8 @@ import math
 
 def triangle_area(side_a=None, side_b=None, side_c=None, height=None, angle_alpha=None) -> Number:
     """
-    calculates the area of a triangle with al sides given, two sides and an angle (alpha) and in the
-    case of base and height.
+    calculates the area of a triangle with al sides given, two sides and
+     an angle (alpha) and in the case of base and height.
 
 >>> triangle_area(side_a=5,height=8)
     @param height:The height of triangle
@@ -22,12 +22,12 @@ def triangle_area(side_a=None, side_b=None, side_c=None, height=None, angle_alph
     if (side_a is not None) & (height is not None):
         area = side_a * height / 2    # side_a is the base in this case
         return area
-    ################ TWO SIDES AND THE ANGLE BETWEEN THEM  #######
+# TWO SIDES AND THE ANGLE BETWEEN THEM
     elif (side_a is not None) & (side_b is not None) & (angle_alpha is not None):
             area = 0.5*side_a*side_b*sin(angle_alpha)  # side_a and side_b can be  any of the two sides
             return area
     elif (side_a is not None) & (side_b is not None) & (side_c is not None):
-   ######## HORN' FORMULA ( Given three sides ) ########
+# HORN' FORMULA ( Given three sides )
         if (side_a is not None) & (side_b is not None) & (side_c is not None):
             if ((side_a + side_b) > side_c) & ((side_a + side_c) > side_b) & ((side_b + side_c) > side_a):  # CONDITION
                 s = (side_a + side_b + side_c) / 2  # s is the perimeter of the triangle
